@@ -1,0 +1,83 @@
+<div id="bannerCarousel" class="carousel slide mt-3" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active position-relative">
+      <img
+        src="https://grandeurwatches.com.sg/cdn/shop/t/5/assets/slide_3.jpg?v=45104374290301683071466519630"
+        class="d-block w-100"
+        style="height: 75vh; object-fit: cover; filter: brightness(65%);"
+        alt="Banner 1"
+      />
+      <div class="carousel-caption text-start">
+        <h2 class="text-white fw-bold display-5" style="text-shadow: 2px 2px 8px black;">Luxury Timepieces</h2>
+        <p class="text-light fs-5" style="text-shadow: 1px 1px 6px black;">Elegance meets precision.</p>
+        <a href="#" class="btn btn-warning btn-lg mt-2 animate-btn">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item position-relative">
+      <img
+        src="https://grandeurwatches.com.sg/cdn/shop/t/5/assets/slide_4.jpg?v=159702989759482463491466520009"
+        class="d-block w-100"
+        style="height: 75vh; object-fit: cover; filter: brightness(65%);"
+        alt="Banner 2"
+      />
+      <div class="carousel-caption text-center">
+        <h2 class="text-white fw-bold display-5" style="text-shadow: 2px 2px 8px black;">Modern Style</h2>
+        <p class="text-light fs-5" style="text-shadow: 1px 1px 6px black;">Wear your confidence.</p>
+        <a href="#" class="btn btn-info btn-lg mt-2 animate-btn">Discover</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item position-relative">
+      <img
+        src="https://grandeurwatches.com.sg/cdn/shop/t/5/assets/slide_5.jpg?v=142048715745064213741466692070"
+        class="d-block w-100"
+        style="height: 75vh; object-fit: cover; filter: brightness(65%);"
+        alt="Banner 3"
+      />
+      <div class="carousel-caption text-end">
+        <h2 class="text-white fw-bold display-5" style="text-shadow: 2px 2px 8px black;">Timeless Design</h2>
+        <p class="text-light fs-5" style="text-shadow: 1px 1px 6px black;">For every generation.</p>
+        <a href="#" class="btn btn-danger btn-lg mt-2 animate-btn">Explore More</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+  </button>
+</div>
+
+<!-- CSS Animation -->
+<style>
+  .animate-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .animate-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (max-width: 768px) {
+    .carousel-caption h2 {
+      font-size: 1.75rem;
+    }
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+    .carousel-caption {
+      bottom: 15%;
+    }
+  }
+</style>
