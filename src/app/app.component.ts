@@ -7,7 +7,7 @@ import { SlideComponent } from './slide/slide.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,ProductComponent,FooterComponent,NavigationComponent,SlideComponent],
+  imports: [RouterOutlet,FooterComponent,NavigationComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

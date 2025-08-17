@@ -1,16 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark px-4 shadow" style="background: linear-gradient(90deg, #1f2937, #4b5563);">
+<nav class="navbar navbar-expand-lg navbar-dark px-4 shadow fixed-top" style="background: linear-gradient(90deg, #1f2937, #4b5563);">
   <a class="navbar-brand fw-bold text-warning" href="#">Yuth Store</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   <div class="d-flex align-items-center gap-3">
+
+    <a routerLink="/cart">
+      <button class="btn btn-warning px-3 d-block d-lg-none position-relative d-block d-lg-none">
+      Cart 
+      <span class="text-danger position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-danger">{{cartList.length}}</span>
+    </button> 
+    </a>
+
+    <button class="navbar-toggler" type="button" (click)="handleTogleMenu()">
     <span class="navbar-toggler-icon"></span>
   </button>
+   </div>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" >
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
       <!-- Home -->
       <li class="nav-item">
-        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+        <a class="nav-link active text-white" aria-current="page" routerLink="/">Home</a>
       </li>
 
       <!-- Product -->
@@ -19,30 +28,66 @@
       </li>
 
       <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Categories
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Watches</a></li>
-          <li><a class="dropdown-item" href="#">Accessories</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Sale</a></li>
-        </ul>
+       <li class="nav-item">
+        <a class="nav-link text-white" href="#">Contact Us</a>
       </li>
+      
 
       <!-- About -->
-      <li class="nav-item">
+      <li class="nav-item"> 
         <a class="nav-link text-white" href="#">About Us</a>
       </li>
 
     </ul>
 
     <!-- Search -->
-    <form class="d-flex" role="search">
-      <input class="form-control me-2 border-0 rounded" type="search" placeholder="Search" aria-label="Search">
+    <form class="d-flex gap-3" role="search">
+      <input class="form-control border-0 rounded" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-warning" type="submit">Search</button>
+      
+      <a routerLink="/cart">
+        <button class="btn btn-warning px-3 d-none d-lg-block position-relative">Cart 
+        <span class="text-danger position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-danger">{{cartList.length}}</span>
+      </button>
+      </a>
+
     </form>
   </div>
+  <!-- Mobile Menu --> 
+  @if(toogleMenu){
+    <div class="d-lg-none d-block">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      <!-- Home -->
+      <li class="nav-item">
+        <a class="nav-link active text-white" aria-current="page" routerLink="/">Home</a>
+      </li>
+
+      <!-- Product -->
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Products</a>
+      </li>
+
+      <!-- Dropdown -->
+       <li class="nav-item">
+        <a class="nav-link text-white" href="#">Contact Us</a>
+      </li>
+      
+
+      <!-- About -->
+      <li class="nav-item"> 
+        <a class="nav-link text-white" href="#">About Us</a>
+      </li>
+
+    </ul>
+
+    <!-- Search -->
+    <form class="d-flex gap-3" role="search">
+      <input class="form-control border-0 rounded" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-warning" type="submit">Search</button>
+      
+    </form>
+  </div>
+  }
+   
 </nav>
